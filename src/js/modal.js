@@ -13,8 +13,8 @@ function toggleModal() {
 
 function getCardMove(event) {
     event.preventDefault();
-    console.log(event.target);
+    console.dir(event.target);
 
-    // toggleModal()
-    // apiService.queryMove(query).then(array=>getMarkupModal(array))
+    toggleModal()
+    apiService.queryMove("527774").then(array=>getMarkupModal(array))
 }

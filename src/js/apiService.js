@@ -5,13 +5,6 @@ const fetchMovies = {
     page: 1,
     apiKey: 'e1648943ec3f00b3b8db827b73df4be9',
 
-    queryMove(search) {
-        const url = `https://api.themoviedb.org/3/search/movie/?query=${search}&api_key=${this.apiKey}`
-        return fetch(url)
-            .then(res => res.json())
-            .catch(err => console.log(err))
-    },
-
     fetchMovies() {
         // const apiKey = 'e1648943ec3f00b3b8db827b73df4be9';
         return axios(`https://api.themoviedb.org/3/search/movie/?query=${this.query}&api_key=${this.apiKey}&page=${this.page}`)
