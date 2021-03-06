@@ -4,7 +4,7 @@ const fetchMovies = {
     searchQuery: '',
     page: 1,
     apiKey: 'e1648943ec3f00b3b8db827b73df4be9',
-
+    
     fetchMovies() {
         // const apiKey = 'e1648943ec3f00b3b8db827b73df4be9';
         return axios(`https://api.themoviedb.org/3/search/movie/?query=${this.query}&api_key=${this.apiKey}&page=${this.page}`)
