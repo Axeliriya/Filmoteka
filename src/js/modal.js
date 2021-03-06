@@ -1,20 +1,24 @@
 import refs from "./refs"
 import getMarkupModal from './modal-markup'
 import apiService from './apiService'
-const {closeModal,overlay, galleryRef} = refs
+const {modal, closeModal,overlay, galleryRef} = refs
 
 
 closeModal.addEventListener('click', toggleModal)
 galleryRef.addEventListener('click', getCardMove)
 
-function toggleModal() {
+function toggleModal(event) {
     overlay.classList.toggle('is-hidden')
 }
 
 function getCardMove(event) {
     event.preventDefault();
-    console.dir(event.target);
+    const currentFilm = event.target
+    // blockFilm.innerHTML=''
+
+console.dir(currentFilm);    
+    const filmID=currentFilm.dataset.id
 
     toggleModal()
-    apiService.fetchID("527774").then(array=>getMarkupModal(array))
+    apiService.fetchID(filmID).then(array=>getMarkupModal(array))
 }
