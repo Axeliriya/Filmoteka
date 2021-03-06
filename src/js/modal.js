@@ -7,7 +7,6 @@ const {closeModal,openModal,overlay} = refs
 closeModal.addEventListener('click', toggleModal)
 openModal.addEventListener('click', getCardMove)
 
-
 function toggleModal() {
     overlay.classList.toggle('is-hidden')
 }
@@ -17,5 +16,5 @@ function getCardMove(event) {
     const query = 'Tom & Jerry'
 
     toggleModal()
-    apiService.queryMoves(query).then(array=>getMarkupModal(array))
+    apiService.queryMove(query).then(array=>getMarkupModal(array))
 }

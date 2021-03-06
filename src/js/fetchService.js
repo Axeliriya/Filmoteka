@@ -1,6 +1,6 @@
 import refs from '../js/refs';
 import apiService from './apiService.js';
-import getMarkupGallery from '../templating/gallery.js'
+import getMarkupGallery from './gallery.js'
 import debounce from "lodash.debounce";
 
 
