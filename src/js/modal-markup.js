@@ -3,7 +3,7 @@ import markup from '../templates/modalCard.hbs'
 const { modal } = refs;
 
 const getMarkupModal = (objectMovie) => {
-    const updateMarkup = markup(objectMovie.results)
+    const updateMarkup = markup(objectMovie)
     modal.insertAdjacentHTML('beforeend', updateMarkup)
 }
 

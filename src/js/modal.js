@@ -16,5 +16,5 @@ function getCardMove(event) {
     console.dir(event.target);
 
     toggleModal()
-    apiService.queryMove("527774").then(array=>getMarkupModal(array))
+    apiService.fetchID("527774").then(array=>getMarkupModal(array))
 }
