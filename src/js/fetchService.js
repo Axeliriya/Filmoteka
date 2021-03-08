@@ -8,7 +8,14 @@ function initialFetch() {
   apiService
     .fetchPopularMovies()
     .then(({ results }) => results)
-    .then(film => getMarkupGallery(film));
+    .then(film => {
+      const newArrayFilm = film.map(el => {
+        const newDate = el.release_date.slice(0, 4);
+        el.release_date = newDate;
+        return el;
+      });
+      return getMarkupGallery(newArrayFilm);
+    });
 }
 initialFetch();
 // setTimeout(initialFetch, 0);
