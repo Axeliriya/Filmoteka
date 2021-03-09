@@ -38,3 +38,12 @@
   @include font(500, 12px, 1.33);
   color: $accent-color;
 }
+
+.film-rate {
+  margin: 0 auto;
+  min-width: 36px;
+  border-radius: 5px;
+
+  color: $light-text-color;
+  background-color: $accent-color;
+}

@@ -91,3 +91,15 @@ function cleanMarkup() {
   refs.galleryRef.innerHTML = '';
 };
 
+function SliceData(results) {
+  results.forEach((index, arr) => {
+   
+   
+    arr[index].release_date =
+      typeof arr[index].release_date === 'string'
+        ? arr[index].release_date.slice(0, 4)
+        : arr[index].release_date;
+});
+}
+
+ 
